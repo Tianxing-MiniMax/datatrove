@@ -29,7 +29,7 @@ TOTAL_TASKS = 1000
 
 # this is the original data that we want to deduplicate
 INPUT_READER = JsonlReader("s3://mybucket/base_processing/output/")
-
+##挖坑，把这部分数据来源从disk换到db
 # stage 1 computes minhash signatures for each task (each task gets a set of files)
 stage1 = SlurmPipelineExecutor(
     job_name="mh1",
